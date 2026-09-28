@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pavan Naidu | Portfolio</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Arial, sans-serif;
+    }
+
+    body {
+      background-color: #f4f6f9;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    /* ---------- Navbar ---------- */
+    nav {
+      background-color: #1e2a3a;
+      padding: 15px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    nav .logo {
+      color: #ffffff;
+      font-size: 22px;
+      font-weight: bold;
+    }
+
+    nav .logo span {
+      color: #4da8ff;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 25px;
+    }
+
+    nav ul li a {
+      color: #cfd8e3;
+      text-decoration: none;
+      font-size: 16px;
+      transition: color 0.3s;
+    }
+
+    nav ul li a:hover {
+      color: #4da8ff;
+    }
+
+    /* ---------- Hero Section ---------- */
+    .hero {
+      background: linear-gradient(135deg, #1e2a3a, #2c4a6e);
+      color: white;
+      text-align: center;
+      padding: 100px 20px;
+    }
+
+    .hero h1 {
+      font-size: 48px;
+      margin-bottom: 10px;
+    }
+
+    .hero h1 span {
+      color: #4da8ff;
+    }
+
+    .hero p {
+      font-size: 20px;
+      color: #cfd8e3;
+      max-width: 600px;
+      margin: 0 auto 30px auto;
+    }
+
+    .hero a {
+      display: inline-block;
+      background-color: #4da8ff;
+      color: #ffffff;
+      padding: 12px 30px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background-color 0.3s;
+    }
+
+    .hero a:hover {
+      background-color: #2b8ae0;
+    }
+
+    /* ---------- Sections ---------- */
+    section {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 60px 20px;
+    }
+
+    section h2 {
+      font-size: 32px;
+      color: #1e2a3a;
+      margin-bottom: 25px;
+      border-bottom: 3px solid #4da8ff;
+      display: inline-block;
+      padding-bottom: 5px;
+    }
+
+    /* ---------- About ---------- */
+    .about-card {
+      background-color: #ffffff;
+      border-radius: 10px;
+      padding: 30px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+      font-size: 17px;
+    }
+
+    /* ---------- Education ---------- */
+    .edu-item {
+      background-color: #ffffff;
+      border-left: 5px solid #4da8ff;
+      border-radius: 8px;
+      padding: 20px 25px;
+      margin-bottom: 20px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    }
+
+    .edu-item h3 {
+      color: #1e2a3a;
+      font-size: 20px;
+    }
+
+    .edu-item .years {
+      color: #4da8ff;
+      font-weight: bold;
+      font-size: 14px;
+    }
+
+    .edu-item p {
+      margin-top: 5px;
+      color: #555;
+    }
+
+    /* ---------- Skills ---------- */
+    .skills-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .skill-card {
+      background-color: #ffffff;
+      border-radius: 10px;
+      padding: 25px;
+      flex: 1 1 250px;
+      text-align: center;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+      transition: transform 0.3s;
+    }
+
+    .skill-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .skill-card .icon {
+      font-size: 40px;
+      margin-bottom: 10px;
+    }
+
+    .skill-card h3 {
+      color: #1e2a3a;
+      margin-bottom: 8px;
+    }
+
+    .skill-card p {
+      color: #555;
+      font-size: 15px;
+    }
+
+    /* ---------- Contact ---------- */
+    .contact-card {
+      background-color: #1e2a3a;
+      color: #ffffff;
+      border-radius: 10px;
+      padding: 40px;
+      text-align: center;
+    }
+
+    .contact-card p {
+      font-size: 18px;
+      margin-bottom: 15px;
+      color: #cfd8e3;
+    }
+
+    .contact-card a {
+      color: #4da8ff;
+      font-size: 18px;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    .contact-card a:hover {
+      text-decoration: underline;
+    }
+
+    /* ---------- Footer ---------- */
+    footer {
+      background-color: #141d29;
+      color: #8fa1b5;
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
+    }
+
+    /* ---------- Responsive ---------- */
+    @media (max-width: 600px) {
+      nav {
+        flex-direction: column;
+        gap: 10px;
+        padding: 15px 20px;
+      }
+
+      .hero h1 {
+        font-size: 34px;
+      }
+
+      .hero p {
+        font-size: 17px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav>
+    <div class="logo">Pavan<span>.dev</span></div>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero -->
+  <div class="hero">
+    <h1>Hi, I'm <span>Pavan Naidu</span></h1>
+    <p>1st Year Computer Science Student at Scaler School of Technology (Batch 2026–2030)</p>
+    <a href="#contact">Get In Touch</a>
+  </div>
+
+  <!-- About -->
+  <section id="about">
+    <h2>About Me</h2>
+    <div class="about-card">
+      <p>
+        I am a first-year Computer Science undergraduate at <strong>Scaler School of Technology</strong>,
+        part of the 2026–2030 batch. I am passionate about programming and building things for the web.
+        I enjoy solving problems with <strong>Java</strong> and <strong>Python</strong>, and I love creating
+        simple, clean websites using <strong>HTML</strong> and <strong>CSS</strong>. I am always eager to
+        learn new technologies and grow as a developer.
+      </p>
+    </div>
+  </section>
+
+  <!-- Education -->
+  <section id="education">
+    <h2>Education</h2>
+
+    <div class="edu-item">
+      <h3>Scaler School of Technology</h3>
+      <span class="years">2026 – 2030</span>
+      <p>B.Sc / B.Tech in Computer Science — 1st Year Undergraduate Student</p>
+    </div>
+
+    <div class="edu-item">
+      <h3>Allen, Hyderabad</h3>
+      <span class="years">High School (11th & 12th)</span>
+      <p>Completed my higher secondary education with a focus on science and mathematics.</p>
+    </div>
+
+    <div class="edu-item">
+      <h3>Jawahar Navodaya Vidyalaya</h3>
+      <span class="years">Up to 10th Standard</span>
+      <p>Completed my secondary school education (Class 10).</p>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills">
+    <h2>Skills</h2>
+    <div class="skills-grid">
+      <div class="skill-card">
+        <div class="icon">☕</div>
+        <h3>Java</h3>
+        <p>Comfortable writing programs and solving problems using Java.</p>
+      </div>
+      <div class="skill-card">
+        <div class="icon">🐍</div>
+        <h3>Python</h3>
+        <p>Able to code in Python for scripting and problem solving.</p>
+      </div>
+      <div class="skill-card">
+        <div class="icon">🌐</div>
+        <h3>HTML & CSS</h3>
+        <p>Can build simple, responsive websites using HTML and CSS.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact">
+    <h2>Contact</h2>
+    <div class="contact-card">
+      <p>Feel free to reach out to me via email:</p>
+      <a href="mailto:pavan.26bcs10587@sst.scaler.com">pavan.26bcs10587@sst.scaler.com</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    © 2026 Pavan Naidu — Built with HTML & CSS
+  </footer>
+
+</body>
+</html>
